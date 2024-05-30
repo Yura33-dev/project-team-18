@@ -2,6 +2,52 @@
   --mobile-mb: 80px;
   --tablet-mb: 124px;
   --desktop-mb: 164px;
+
+  --text-color: #292929;
+  --bg-color: #f0f0f0;
+  --accent-bg-color: #e4e5e6;
+  --accent-green: #00b068;
+  --accent-light-green: #bcdfd1;
+}
+
+.dark-mode {
+  --text-color: #f0f0f0;
+  --bg-color: #1e2023;
+  --accent-bg-color: #2a2d32;
+  --accent-green: #14c57c;
+  --accent-light-green: #204136;
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Impact', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./../fonts/Impact.ttf') format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  src: url('./../fonts/Poppins-Light.ttf') format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  src: url('./../fonts/Poppins-Regular.ttf') format('ttf');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Poppins', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  src: url('./../fonts/Poppins-Medium.ttf') format('ttf');
 }
 
 /* Reset styles */
@@ -11,6 +57,8 @@
 
 body {
   font-family: 'Poppins', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
 }
 
 h1,
@@ -23,9 +71,37 @@ p {
   margin: 0;
 }
 
+h1,
+h2 {
+  font-family: 'Impact', sans-serif;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 52px;
+}
+
 h3 {
   font-family: 'Poppins', sans-serif;
   font-weight: 500;
+  font-size: 32px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 136px;
+  }
+
+  h2 {
+    font-size: 108px;
+  }
+
+  h3 {
+    font-size: 36px;
+  }
 }
 
 ul {
