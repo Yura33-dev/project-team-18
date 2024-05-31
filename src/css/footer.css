@@ -16,7 +16,7 @@
   margin-bottom: 24px;
   line-height: 150%;
   letter-spacing: 0.03em;
-  color: var(--text-color);
+  /* color: var(--text-color); */
 }
 
 .footer-social {
@@ -30,10 +30,13 @@
   gap: 24px;
 }
 
+.footer-soc-link {
+  transition: var(--transition);
+}
+
 .footer-soc-link:hover,
 .footer-soc-link:focus {
   color: var(--accent-green);
-  transition: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-copyright {
