@@ -1,8 +1,20 @@
 /* .........................Mobile.................... */
-.container {
+/* .about {
+  min-width: 320px;
   max-width: 360px;
-  padding: 0 20px 0 20px;
   margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  height: 1750px;
+  margin-bottom: 80px;
+}
+.container {
+  position: relative;
+}
+
+.about-me-photo {
+  margin-bottom: 40px;
+  position: relative;
 }
 .about-title {
   font-weight: 400;
@@ -18,20 +30,37 @@ span {
   color: #00b068;
 }
 .about-image {
-  border-radius: 16px;
-  width: 320px;
-  height: 374px;
+  object-fit: cover;
+}
+
+.bio-container {
   margin-bottom: 40px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  width: 320px;
+  height: 696px;
 }
 .about-bio {
   font-weight: 500;
   font-size: 32px;
-  line-height: 1.2;
+  line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   margin-bottom: 32px;
 }
-.about-bio-list {
+.text-wrap {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  /* gap: 24px; */
+/* height: 624px;
+width: 320px;
+ */
+/* .about-bio-list {
   font-weight: 300;
   font-size: 16px;
   line-height: 1.5;
@@ -59,6 +88,7 @@ span {
 }
 .education-icon {
   margin-right: 8px;
+  flex: 1 0 auto;
 }
 .education-list {
   max-width: 288px;
@@ -85,6 +115,7 @@ span {
 }
 .role-icon {
   margin-right: 8px;
+  flex: 1 0 auto;
 }
 .role-list {
   font-weight: 300;
@@ -92,3 +123,45 @@ span {
   line-height: 1.5;
   letter-spacing: 0.03em;
 }
+.role-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+  height: 168px;
+}
+.role-item {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 12px;
+  height: 96px;
+} */
+
+/* ..........Tablet.......... */
+/* @media only screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px 0 32px;
+    margin: 0 auto;
+  }
+  .about-title {
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    text-align: right;
+  }
+  .bio-container {
+    width: 336px;
+  }
+} */
+
+/* @media only screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+    padding: 0 32px 0 32px;
+    margin: 0 auto;
+  }
+} */
