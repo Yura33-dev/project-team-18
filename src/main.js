@@ -52,3 +52,10 @@ cont.onclick = function closeModal() {
   modal.classList.remove('is-open');
 };
 
+import './js/darkMode';
+import './js/faq';
+import './js/mobileMenu';
+import './js/myProjects';
+import './js/popup';
+import './js/reviews';
+import './js/workTogether';
