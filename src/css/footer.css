@@ -30,7 +30,7 @@
 }
 
 .footer-soc-link {
-  transition: var(--transition);
+  transition: color var(--transition);
 }
 
 .footer-soc-link:hover,
