@@ -45,14 +45,14 @@
         justify-content: space-between;
         max-width: 375px;
         margin: 0 auto;
-        gap: 108px;
+        gap: 85px;
     }
 
     .sidebar-logo {
-        font-family: Impact;
+        font-family: Impact, sans-serif;
         font-size: 24px;
-        line-height: 35px;
-        letter-spacing: 1.5px;
+        line-height: 1;
+        letter-spacing: 0.06em;
         text-align: left;
     }
 
@@ -81,25 +81,13 @@
 
     .sidebar-nav-link {
         position: relative;
-        color: black;
         font-size: 16px;
         font-weight: 300;
-        line-height: 24px;
-        letter-spacing: 0.5px;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
         text-align: left;
-    }
-
-    .sidebar-nav-link::after {
-        content: '';
-        position: absolute;
-        left: 50%;
-        bottom: -10px;
-        transform: translateX(-50%);
-        width: 8px;
-        height: 8px;
-        border-radius: 50%;
-        background-color: none;
-        transition: background-color 250ms linear;
+        font-family: "Poppins", sans-serif;
+        color: #292929;
     }
 
 }
@@ -107,5 +95,11 @@
 @media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
     .sidebar-menu {
         background-image: url('../img/menu/decor-bg-mob@2x.png');
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .backdrop {
+        display: none;
     }
 }
