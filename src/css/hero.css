@@ -27,9 +27,10 @@
     margin-right: 12px;
 }
 
-.hero-custom-button .hero-icon {
+.hero-icon {
     width: 28px;
     --color2: #2ecc71;
+    max-height: 100px;
 }
 
 .hero-custom-button::after {
@@ -43,7 +44,8 @@
     background-color: #00B06833;
     border-radius: 16px;
     z-index: -1;
-    transition: background-color 0.3s ease;
+    transition: background-color var(--transition);
+    transition: background-color 250ms linear;
 }
 
 .hero-custom-button:hover::after,
@@ -153,6 +155,7 @@
         flex-direction: column;
         display: flex;
         align-items: flex-end;
+        margin-bottom: 76px;
     }
 
     .hero-social-ul {
@@ -170,6 +173,8 @@
         font-family: "Poppins", sans-serif;
         line-height: 1.5;
         letter-spacing: 0.03em;
+        transition: color var(--transition);
+        transition: color 250ms linear;
     }
 
     .hero-social-a:focus,
@@ -190,7 +195,6 @@
     .hero-custom-button {
         font-size: 20px;
         margin-top: 40px;
-        margin-bottom: 76px;
         line-height: 1.6;
     }
 

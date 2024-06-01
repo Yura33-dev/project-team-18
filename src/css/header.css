@@ -2,7 +2,7 @@
 
 .header-container {
     max-width: 375px;
-    padding: 36px 0;
+    padding: 16px 0;
     margin: 0 auto;
     display: flex;
     align-items: center;
@@ -90,6 +90,8 @@
         display: block;
         padding: 36px 0;
         font-family: "Poppins", sans-serif;
+        transition: color var(--transition);
+        transition: color 250ms linear;
     }
 
     .nav-menu-link:focus,
