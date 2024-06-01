@@ -93,13 +93,13 @@
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .benefits {
-      background-image: url(./img/benefits-decor-bd-@2x.png);
+      background-image: url(../img/benefits-decor-bd-@2x.png);
     }
   }
 }
 @media only screen and (min-width: 1280px) {
   .benefits {
-    background-image: url(./img/benefits-decor-bg.png);
+    background-image: url(../img/benefits-decor-bg.png);
     background-repeat: no-repeat;
     background-position: top 0 right 32px;
   }
