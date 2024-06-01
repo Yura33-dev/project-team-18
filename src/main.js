@@ -15,42 +15,21 @@ document.querySelectorAll('.smooth-scroll').forEach(anchor => {
 });
 
 // Open mobile menu pop-up
-let openbutton = document.getElementById('openbutton');
-openbutton.onclick = function openModal() {
+let openButton = document.getElementById('openbutton');
+openButton.onclick = function openModal() {
   let modal = document.querySelector('#mobile-menu');
   modal.classList.add('is-open');
 };
 
 // Close mobile menu pop-ups and go to sections
-let closebutton = document.getElementById('closebutton');
-closebutton.onclick = function closeModal() {
-  let modal = document.querySelector('#mobile-menu');
-  modal.classList.remove('is-open');
-};
+let closeButtons = document.querySelectorAll('#closebutton, #sidelogo, #ab_me, #prj, #cont');
 
-let sidelogo = document.getElementById('sidelogo'); // pop-up logo
-sidelogo.onclick = function closeModal() {
-  let modal = document.querySelector('#mobile-menu');
-  modal.classList.remove('is-open');
-};
-
-let ab_us = document.getElementById('ab_me'); // About me
-ab_us.onclick = function closeModal() {
-  let modal = document.querySelector('#mobile-menu');
-  modal.classList.remove('is-open');
-};
-
-let prj = document.getElementById('prj'); // My projects
-prj.onclick = function closeModal() {
-  let modal = document.querySelector('#mobile-menu');
-  modal.classList.remove('is-open');
-};
-
-let cont = document.getElementById('cont'); // Contacts
-cont.onclick = function closeModal() {
-  let modal = document.querySelector('#mobile-menu');
-  modal.classList.remove('is-open');
-};
+closeButtons.forEach(button => {
+  button.onclick = function closeModal() {
+    let modal = document.querySelector('#mobile-menu');
+    modal.classList.remove('is-open');
+  }
+});
 
 import './js/darkMode';
 import './js/faq';
