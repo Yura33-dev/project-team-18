@@ -1,0 +1,94 @@
+/* .........................Mobile.................... */
+.container {
+  max-width: 360px;
+  padding: 0 20px 0 20px;
+  margin: 0 auto;
+}
+.about-title {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: right;
+  max-width: 217px;
+  margin-bottom: 40px;
+}
+span {
+  color: #00b068;
+}
+.about-image {
+  border-radius: 16px;
+  width: 320px;
+  height: 374px;
+  margin-bottom: 40px;
+}
+.about-bio {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.about-bio-list {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 24px;
+}
+.about-bio-text {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  margin-bottom: 40px;
+}
+.about-education {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.education-container {
+  display: flex;
+  margin-bottom: 12px;
+}
+.education-icon {
+  margin-right: 8px;
+}
+.education-list {
+  max-width: 288px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+.education-item {
+  margin-bottom: 40px;
+}
+.about-role {
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+}
+.role-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.role-icon {
+  margin-right: 8px;
+}
+.role-list {
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
