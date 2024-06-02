@@ -1,7 +1,7 @@
 /*============================= max-width: 767px =====================================*/
-/* .hero {
-    background-color: #F0F0F0;
-} */
+.hero-background-container {
+    background-position: right top;
+}
 
 .hero-hello-title {
     display: flex;
@@ -9,28 +9,29 @@
 
 .hero-custom-button {
     position: relative;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     text-decoration: none;
-    color: #292929;
+    color: var(--text-color);
     cursor: pointer;
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 0.03em;
     text-align: left;
-    max-height: 100px;
     font-family: "Poppins", sans-serif;
     line-height: 1.56;
 }
 
 .hero-custom-button .hero-arrow {
     margin-right: 12px;
+    height: 28px;
 }
 
 .hero-icon {
     width: 28px;
     --color2: #2ecc71;
     max-height: 100px;
+    height: 28px;
 }
 
 .hero-custom-button::after {
@@ -38,7 +39,7 @@
     position: absolute;
     top: 50%;
     left: 60%;
-    transform: translate(0%, -50%);
+    transform: translate(-25%, -50%);
     width: 165px;
     height: 92px;
     background-color: #00B06833;
@@ -60,28 +61,33 @@
     line-height: 1.56;
     letter-spacing: 0.03em;
     text-align: center;
-    background-color: #E4E5E6;
+    background-color: var(--accent-bg-color);
     padding: 32px 10px;
     font-family: "Poppins", sans-serif;
-    color: #292929;
+    color: var(--text-color);
+
+}
+
+.hero-moto-p {
+    max-width: 320px;
+    margin: auto;
 }
 
 .hero-moto span {
-    color: #00B068;
+    color: var(--accent-green);
 }
 
 /* =================== media ======================*/
 
 @media only screen and (max-width: 767px) {
 
-    .hero {
+    .hero-background-container {
         background-image: url('../img/menu/decor-bg-mob.png');
         background-size: cover;
     }
 
     .hero-hello-title {
         flex-direction: column;
-        margin-bottom: 8px;
     }
 
     .hero-title-black {
@@ -90,9 +96,10 @@
         font-weight: 400;
         line-height: 1.25;
         letter-spacing: 0.03em;
-        text-align: left;
-        color: #292929;
+        color: var(--text-color);
         margin-bottom: 8px;
+        width: 165px;
+        text-align: right;
     }
 
     .hero-hello-container {
@@ -106,15 +113,14 @@
         line-height: 1.25;
         letter-spacing: 0.03em;
         text-align: right;
-        color: #00B068;
-        margin-bottom: 12px;
+        color: var(--accent-green);
+        margin-bottom: 44px;
     }
 
     .hero-fstack-container {
         display: flex;
         flex-direction: column;
-        margin-bottom: 32px;
-        /* overflow: hidden; */
+        margin-bottom: 64px;
     }
 
     .hero-social-container {
@@ -124,7 +130,7 @@
 }
 
 @media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
-    .hero {
+    .hero-background-container {
         background-image: url('../img/menu/decor-bg-mob@2x.png');
     }
 }
@@ -133,7 +139,7 @@
 
 @media only screen and (min-width: 768px) {
 
-    .hero {
+    .hero-background-container {
         background-image: url('../img/decor-bg-tab.png');
         background-size: cover;
     }
@@ -147,10 +153,11 @@
         font-weight: 400;
         line-height: 1.15;
         letter-spacing: 0.01em;
-        text-align: right;
         margin-right: 28px;
         font-family: "Impact", sans-serif;
-        color: #292929;
+        color: var(--text-color);
+        width: 340px;
+        text-align: right;
     }
 
     .hero-fstack-container {
@@ -169,7 +176,7 @@
         font-size: 16px;
         font-weight: 300;
         text-align: left;
-        color: #292929;
+        color: var(--text-color);
         display: block;
         padding: 12px 0;
         font-family: "Poppins", sans-serif;
@@ -181,14 +188,14 @@
 
     .hero-social-a:focus,
     .hero-social-a:active {
-        color: #00B068;
+        color: var(--accent-green);
     }
 
     .hero-title-green {
         font-size: 136px;
         font-weight: 400;
         text-align: right;
-        color: #00B068;
+        color: var(--accent-green);
         line-height: 1.15;
         letter-spacing: 0.01em;
         font-family: "Impact", sans-serif;
@@ -203,6 +210,7 @@
     .hero-custom-button::after {
         width: 261px;
         height: 96px;
+        transform: translate(-80%, -50%);
     }
 
     .hero-moto {
@@ -213,10 +221,14 @@
         text-align: center;
         padding: 64px 32px;
     }
+
+    .hero-moto-p {
+        max-width: 704px;
+    }
 }
 
 @media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
-    .hero {
+    .hero-background-container {
         background-image: url('../img/decor-bg-tab@2x.png');
     }
 }
@@ -225,13 +237,14 @@
 
 @media only screen and (min-width: 1280px) {
 
-    .hero {
+    .hero-background-container {
         background-image: url('../img/decor-bg-web.png');
         background-size: cover;
     }
 
     .hero-title-black {
         margin-right: 32px;
+        width: 384px;
     }
 
     .hero-fstack-container {
@@ -245,28 +258,34 @@
         justify-content: space-between;
         align-items: center;
         /* transform: translate(0, 5%); */
-        /* margin-bottom: -100px; */
         width: 100%;
     }
 
     .hero-social-a:hover,
     .hero-social-a:focus,
     .hero-social-a:active {
-        color: #00B068;
+        color: var(--accent-green);
     }
 
     .hero-custom-button {
         margin-top: 80px;
     }
 
+    .hero-custom-button::after {
+        transform: translate(0, -50%);
+    }
+
     .hero-moto {
         padding: 120px 136px;
     }
 
+    .hero-moto-p {
+        max-width: 1008px;
+    }
 }
 
 @media only screen and (min-width: 1280px) and (min-resolution: 192dpi) {
-    .hero {
+    .hero-background-container {
         background-image: url('../img/decor-bg-web@2x.png');
     }
 }

@@ -34,7 +34,7 @@
         min-height: 100%;
         display: flex;
         flex-direction: column;
-        background-color: #f0f0f0;
+        background-color: var(--bg-color);
         background-image: url('../img/menu/decor-bg-mob.png');
         background-size: cover;
     }
@@ -43,9 +43,10 @@
         display: flex;
         padding: 16px 20px;
         justify-content: space-between;
-        max-width: 375px;
+        /* max-width: 375px;
         margin: 0 auto;
-        gap: 85px;
+        gap: 85px; */
+        align-items: center;
     }
 
     .sidebar-logo {
@@ -88,7 +89,7 @@
         letter-spacing: 0.03em;
         text-align: left;
         font-family: "Poppins", sans-serif;
-        color: #292929;
+        color: var(--text-color);
     }
 
 }

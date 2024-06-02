@@ -15,7 +15,7 @@
     line-height: 1;
     letter-spacing: 0.05em;
     text-align: left;
-    color: #292929;
+    color: var(--text-color);
 }
 
 .logo-span {
@@ -86,7 +86,7 @@
         line-height: 1.5;
         letter-spacing: 0.03em;
         text-align: left;
-        color: #292929;
+        color: var(--text-color);
         display: block;
         padding: 36px 0;
         font-family: "Poppins", sans-serif;
