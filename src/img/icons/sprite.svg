@@ -7,8 +7,8 @@
 <path fill="#14c57c" style="fill: var(--color2, #14c57c)" d="M13 10h-2c-0.552 0-1 0.448-1 1v2c0 0.552 0.448 1 1 1h2c0.552 0 1-0.448 1-1v-2c0-0.552-0.448-1-1-1z"></path>
 </symbol>
 <symbol id="icon-arrow-right" viewBox="0 0 24 24">
-<path fill="none" stroke="#f0f0f0" style="stroke: var(--color3, #f0f0f0)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M4 12h16"></path>
-<path fill="none" stroke="#f0f0f0" style="stroke: var(--color3, #f0f0f0)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M14 6l6 6-6 6"></path>
+<path  style="stroke: var(--color3, #f0f0f0)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M4 12h16"></path>
+<path  style="stroke: var(--color3, #f0f0f0)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M14 6l6 6-6 6"></path>
 </symbol>
 <symbol id="icon-arrow-left" viewBox="0 0 24 24">
 <path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="2" d="M20 12h-16"></path>
