@@ -1,4 +1,6 @@
 import { projectsArray } from './projectsArray.js';
+import visitSvg from './img/icons/sprite.svg';
+
 const refs = {
   loadMoreBtnEl: document.querySelector('.btn-load-more'),
   galleryEl: document.querySelector('.my-projects-list'),
@@ -7,8 +9,6 @@ const refs = {
 const params = {
   currentPart: 1,
   per_part: 3,
-  imgWidth: '1008',
-  visitSvgHref: './img/icons/sprite.svg#icon-arrow-visit',
 };
 
 const createProjectCard = project => {
@@ -16,10 +16,10 @@ const createProjectCard = project => {
   <div class="project-card">
 
   <picture>
-  <source srcset="${project.setImages320}" media="(max-width: 767px)"/>
-  <source srcset="${project.setImages768}" media="(max-width: 1279px)"/>
-  <source srcset="${project.setImages1280}" media="(min-width: 1280px)" />
-  <img src="${project.previewImg}" alt="${project.description}" />
+  <source srcset="${project.setImages.image320} 1x,${project.setImages.image320x2} 2x" media="(max-width: 767px)"/>
+  <source srcset="${project.setImages.image768} 1x,${project.setImages.image768x2} 2x" media="(max-width: 1279px)"/>
+  <source srcset="${project.setImages.image1280} 1x,${project.setImages.image1280x2} 2x" media="(min-width: 1280px)" />
+  <img src="${project.setImages.image1280}" alt="${project.description}" />
 </picture>
     <div class="project-card-description">
       <p class="project-technologies">React, JavaScript, Node JS, Git</p>
@@ -32,7 +32,7 @@ const createProjectCard = project => {
           target="_blank"
           >Visit
           <svg class="link-visit-icon">
-            <use href="${params.visitSvgHref}"></use>
+            <use href="${visitSvg}#icon-arrow-visit"></use>
           </svg>
         </a>
       </div>
@@ -55,6 +55,7 @@ const updateGallery = projects => {
   const cardsHTML = projects
     .map(project => createProjectCard(project))
     .join('');
+
   refs.galleryEl.insertAdjacentHTML('beforeend', cardsHTML);
 };
 
