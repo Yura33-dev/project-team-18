@@ -1,0 +1,124 @@
+/* MOBILE */
+/* H2 */
+.benefits-title {
+  margin-bottom: 40px;
+
+  font-weight: 400;
+  line-height: 1.23;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+/* Green word in h2 */
+.title-word {
+  color: var(--accent-green);
+}
+/* SVG Icon */
+.ben-icon {
+  display: flex;
+  margin-bottom: 16px;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 8px;
+  background-color: #00b0681a;
+}
+/* H3 */
+.benefits-item-title {
+  margin-bottom: 16px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+/* P */
+.benefits-item-txt {
+  margin-bottom: 32px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+}
+
+/* TABLET */
+@media only screen and (min-width: 768px) {
+  .container {
+    position: relative;
+  }
+
+  /* H2 Tablet */
+  .benefits-title {
+    width: 704px;
+    position: absolute;
+    top: 0;
+    left: 32px;
+    margin-bottom: 0;
+
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+  }
+
+  /* H3 Tablet */
+  .benefits-item-title {
+    font-size: 20px;
+    line-height: 1.6;
+  }
+  /* UL Tablet */
+  .benefits-list {
+    display: flex;
+    gap: 32px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .benefits-list-item:first-child {
+    padding-top: 352px;
+    padding-left: 368px;
+  }
+  .benefits-list-item:last-child {
+    padding-right: 368px;
+  }
+  /* P Tablet */
+  .benefits-item-txt {
+    width: 336px;
+    margin-bottom: 0;
+  }
+}
+/* DESKTOP */
+@media only screen and (min-width: 1280px) {
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .wrapper {
+      background-image: url(../img/benefits-decor-bd-@2x.png);
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .wrapper {
+    background-image: url(../img/benefits-decor-bg.png);
+    background-repeat: no-repeat;
+    background-position: top 0 right 32px;
+  }
+
+  .benefits-title {
+    letter-spacing: inherit;
+    width: 681px;
+  }
+
+  .benefits-list-item:first-child {
+    flex-wrap: wrap;
+    padding-top: 276px;
+    padding-left: 832px;
+  }
+
+  .benefits-item-txt {
+    width: 384px;
+  }
+  .benefits-list-item:last-child {
+    padding-right: 0px;
+  }
+}
