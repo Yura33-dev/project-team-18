@@ -24,6 +24,7 @@
 }
 
 .title-contacts {
+    align-items: center;
     font-family: font-family;
     font-weight: 300;
     font-size: 16px;
@@ -33,11 +34,6 @@
 
 }
 
-.form-message {
-    width: 100%;
-    margin-top: 40px;
-}
-
 
 .rent-input {
     box-sizing: border-box;
@@ -45,7 +41,6 @@
     height: 48px;
     border-radius: 8px;
     background-color: transparent;
-    outline: none;
     padding-top: 12px;
     padding-bottom: 12px;
     padding-left: 16px;
@@ -61,10 +56,10 @@
     height: 128px;
     border: 1px solid #ccc;
     outline: none;
-
 }
 
 .text-input {
+    border: none;
     width: 100%;
     font-weight: 300;
     font-size: 16px;
@@ -107,6 +102,9 @@
     align-items: center;
     gap: 16px;
 }
+.title-contacts-tables{
+    margin-bottom: 40px;
+}
 
 /* media 768px */
 @media screen and (min-width: 768px) {
@@ -134,11 +132,10 @@
 .title-contacts-tables {
         display: flex;
         white-space: nowrap;
-        bottom: 16px;
-    }
-.form-message{
-    width: 704px;
+        gap: 16px;
+        margin-bottom: 60px;
 }
+
 .title-contacts {
         align-self: baseline;
         font-weight: 300;
@@ -168,6 +165,9 @@
         text-align: center;
         white-space: nowrap;
     }
+    .form-message{
+        width: 592px;
+    }
 }
 
 @media screen and (min-width: 1280px) {
@@ -189,7 +189,7 @@
     .title-contacts-tables {
         display: flex;
         flex-direction: column;
-        bottom: 16px;
+        margin-top: 120px;
     }
 
     .title-contacts-message {
@@ -202,10 +202,14 @@
     .rent-input {
         width: 592px;
         height: 48px;
+       
     }
 
     .message-together {
         width: 592px;
         height: 128px;
+    }
+    .form-message{
+        margin-left: 136px;
     }
 }
