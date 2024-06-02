@@ -25,7 +25,6 @@
 
 .title-contacts {
     align-items: center;
-    font-family: font-family;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
@@ -54,7 +53,6 @@
     padding: 16px;
     width: 320px;
     height: 128px;
-    border: 1px solid #ccc;
     outline: none;
 }
 
