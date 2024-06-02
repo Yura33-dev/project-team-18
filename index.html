@@ -7,14 +7,164 @@
     <title>Lloyd Jefferson</title>
     
     <script type="module" crossorigin src="/project-team-18/commonHelpers.js"></script>
-    <link rel="stylesheet" href="/project-team-18/assets/index-e6233733.css">
+    <link rel="stylesheet" href="/project-team-18/assets/index-6ab0a047.css">
   </head>
 
   <body>
-    <header class="header"></header>
+    <header class="header" id="header">
+  <div class="container">
+    <div class="header-container">
+      <nav class="page-nav">
+        <a class="logo" href="./index.html"
+          >LLOYD<span class="logo-span">JEFFERSON.</span></a
+        >
+        <ul class="nav-menu">
+          <li class="nav-menu-item">
+            <a class="nav-menu-link smooth-scroll" href="#about_me">About me</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link smooth-scroll" href="#projects">Projects</a>
+          </li>
+          <li class="nav-menu-item">
+            <a class="nav-menu-link smooth-scroll" href="#contacts">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+      <button class="menu-open-btn" type="button" id="openbutton">
+        <svg class="menu-open-btn-icon" aria-label="menu open icon">
+          <use href="/project-team-18/assets/sprite-04556e31.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="backdrop" id="mobile-menu">
+  <div class="sidebar-menu">
+    <div class="sidebar-header-container">
+      <a class="sidebar-logo" id="sidelogo" href="./index.html"
+        >LLOYD<span class="logo-span">JEFFERSON.</span></a
+      >
+      <button class="menu-close-btn" type="button" id="closebutton">
+        <svg class="menu-close-icon" aria-label="menu close icon">
+          <use href="/project-team-18/assets/sprite-04556e31.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="sidebar-nav-list">
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#about_me" id="ab_me"
+          >About me</a
+        >
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#projects" id="prj"
+          >Projects</a
+        >
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#contacts" id="cont"
+          >Contacts</a
+        >
+      </li>
+    </ul>
+  </div>
+</div>
 
     <main>
-      <section class="section hero"></section>
+      <section class="section hero">
+  <div class="container">
+    <div class="hero-background-container">
+      <div class="hero-hello-container">
+        <div class="hero-hello-title">
+          <h1 class="hero-title-black">HELLO, I AM</h1>
+          <div class="hero-hello-photo">
+            <picture class="hero-photo">
+              <source
+                media="(min-width: 1158px)"
+                srcset="
+                  ../img/hero/dev-photo-web.png    1x,
+                  ../img/hero/dev-photo-web@2x.png 2x
+                "
+              />
+              <source
+                media="(min-width: 768px)"
+                srcset="
+                  ../img/hero/dev-photo-tab.png    1x,
+                  ../img/hero/dev-photo-tab@2x.png 2x
+                "
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="
+                  ../img/hero/dev-photo-mob.png    1x,
+                  ../img/hero/dev-photo-mob@2x.png 2x
+                "
+              />
+              <img src="../img/hero/dev-photo-web.png " alt="img (My photo)" />
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="hero-fstack-container">
+        <div class="hero-social-container">
+          <ul class="hero-social-ul">
+            <li class="hero-social-li">
+              <a
+                class="hero-social-a"
+                href="https://www.instagram.com/goitclub/"
+                target="_blank"
+                >Instagram</a
+              >
+            </li>
+            <li class="hero-social-li">
+              <a
+                class="hero-social-a"
+                href="https://www.youtube.com/c/GoIT"
+                target="_blank"
+                >Youtube</a
+              >
+            </li>
+            <li class="hero-social-li">
+              <a
+                class="hero-social-a"
+                href="https://www.facebook.com/goITclub/"
+                target="_blank"
+                >Facebook</a
+              >
+            </li>
+            <li class="hero-social-li">
+              <a
+                class="hero-social-a"
+                href="https://github.com/Yura33-dev/project-team-18"
+                target="_blank"
+                >GitHub</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="hero-fstack-title">
+          <h2 class="hero-title-green">FULLSTACK<br />DEVELOPER</h2>
+          <a href="#work-together" class="hero-custom-button smooth-scroll">
+            <span class="hero-arrow">
+              <svg class="hero-icon">
+                <use href="../img/icons/sprite.svg#icon-right-hero"></use>
+              </svg>
+            </span>
+            <span class="hero-text">ORDER THE PROJECT</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-moto">
+    <p class="hero-moto-p">
+      I WORK WITH PEOPLE ALL OVER THE WORLD TO CREATE
+      <span> IMPRESSIVE</span> AND <span>FUNCTIONAL WEBSITES </span> THAT
+      REFLECT EACH CLIENT’S UNIQUE PERSONALITY.
+    </p>
+  </div>
+</section>
 
       
       <section class="section tech-skills">
@@ -76,7 +226,7 @@
         <li class="benefits-list-item">
           <div class="ben-icon">
             <svg width="24" height="24">
-              <use href="/project-team-18/assets/sprite-959fab65.svg#icon-user"></use>
+              <use href="/project-team-18/assets/sprite-04556e31.svg#icon-user"></use>
             </svg>
           </div>
           <h3 class="benefits-item-title">Expertise</h3>
@@ -88,7 +238,7 @@
         <li class="benefits-list-item">
           <div class="ben-icon">
             <svg width="24" height="24">
-              <use href="/project-team-18/assets/sprite-959fab65.svg#icon-chat"></use>
+              <use href="/project-team-18/assets/sprite-04556e31.svg#icon-chat"></use>
             </svg>
           </div>
           <h3 class="benefits-item-title">Communication</h3>
@@ -100,7 +250,7 @@
         <li class="benefits-list-item">
           <div class="ben-icon">
             <svg width="24" height="24">
-              <use href="/project-team-18/assets/sprite-959fab65.svg#icon-brush"></use>
+              <use href="/project-team-18/assets/sprite-04556e31.svg#icon-brush"></use>
             </svg>
           </div>
           <h3 class="benefits-item-title">Art</h3>
@@ -112,7 +262,7 @@
         <li class="benefits-list-item">
           <div class="ben-icon">
             <svg width="24" height="24">
-              <use href="/project-team-18/assets/sprite-959fab65.svg#icon-hourglass"></use>
+              <use href="/project-team-18/assets/sprite-04556e31.svg#icon-hourglass"></use>
             </svg>
           </div>
           <h3 class="benefits-item-title">Urgent execution</h3>
