@@ -4,7 +4,7 @@
     line-height: 123%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: black;
+    color: #292929;
     margin-bottom: 40px;
 }
 
@@ -19,22 +19,23 @@
     line-height: 156%;
     letter-spacing: 0.03em;
     text-transform: uppercase;
-    color: black;
+    color: #292929;
     margin-bottom: 32px;
 }
 
 .title-contacts {
+    font-family: font-family;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
     letter-spacing: 0.03em;
-    color: black;
+    color: #292929;
 
 }
 
 .form-message {
     width: 100%;
-    margin-top: 12px;
+    margin-top: 40px;
 }
 
 
@@ -64,6 +65,7 @@
 }
 
 .text-input {
+    width: 100%;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
@@ -82,13 +84,14 @@
     height: 48px;
     color: white;
     background-color: #00B068;
+    transform: 200ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
 .button-together:hover,
 .button-together:focus {
     background-color: #289990;
-    transform: 200ms cubic-bezier(0.4, 0, 0.2, 1);
+   
 }
 
 .icon-together {
@@ -107,47 +110,42 @@
 
 /* media 768px */
 @media screen and (min-width: 768px) {
-    .contacts-together {
-        width: 639px;
-        height: 120px;
-        margin-bottom: 60px;
-    }
-
-    .title-headline {
-        max-width: 100%;
-        height: 248px;
+.title-headline {
         font-weight: 400;
         font-size: 108px;
         line-height: 115%;
         letter-spacing: 0.02em;
         text-transform: uppercase;
-        color: black;
+        color: #292929;
 
     }
 
-    .title-text {
+.title-text {
+        max-width: 488px;
         font-weight: 400;
         font-size: 18px;
         line-height: 156%;
         letter-spacing: 0.03em;
         text-transform: uppercase;
-        color: black;
+        color: #292929;
 
     }
 
-    .title-contacts-tabdes {
+.title-contacts-tables {
         display: flex;
         white-space: nowrap;
-        gap: 16px;
+        bottom: 16px;
     }
-
-    .title-contacts {
+.form-message{
+    width: 704px;
+}
+.title-contacts {
         align-self: baseline;
         font-weight: 300;
         font-size: 16px;
         line-height: 150%;
         letter-spacing: 0.03em;
-        color: black;
+        color: #292929;
 
     }
 
@@ -174,6 +172,7 @@
 
 @media screen and (min-width: 1280px) {
     .title-headline {
+        margin-bottom: 0;
         width: 100%;
         height: 248px;
         font-weight: 400;
@@ -181,13 +180,16 @@
         line-height: 115%;
         letter-spacing: 0.02em;
         text-transform: uppercase;
-        color: black;
+        color: #292929;
+    }
+    .title-text{
+        margin-bottom: 120px;
     }
 
-    .title-contacts-tabdes {
+    .title-contacts-tables {
         display: flex;
         flex-direction: column;
-        gap: 16px;
+        bottom: 16px;
     }
 
     .title-contacts-message {
@@ -195,18 +197,6 @@
         width: 1216px;
         height: 288px;
         display: flex;
-    }
-
-    .contacts-together {
-        width: auto;
-        height: 288px;
-
-    }
-
-    .form-message {
-        width: 592px;
-        height: 288px;
-        margin-left: 136px;
     }
 
     .rent-input {
@@ -218,72 +208,4 @@
         width: 592px;
         height: 128px;
     }
-}
-
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    width: 360px;
-    height: 756px;
-    background: black;
-    opacity: 0.8;
-}
-
-.modal.active {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.modal-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid rgba(250, 250, 250, 0.1);
-    border-radius: 16px;
-    padding: 48px 32px;
-    width: 320px;
-    height: 328px;
-    margin: 214px 20px;
-    background-color: white;
-    box-sizing: border-box;
-}
-
-.icon-modal-close {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    width: 24px;
-    height: 24px;
-    background-color: rgba(0, 0, 0, 0);
-    border: none;
-    --color3: #292929;
-}
-
-.hidden {
-    display: none;
-}
-
-.modal-text {
-    width: 256px;
-    height: 232px;
-    font-family: sans-serif;
-    font-weight: 300;
-    font-size: 16px;
-    line-height: 150%;
-    letter-spacing: 0.03em;
-    text-align: center;
-    color: black;
-}
-
-.span-modal {
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 160%;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    text-align: center;
-    color: #00B068;
 }
