@@ -1,26 +1,26 @@
 // --------------wallet--------------------
-import walletImage320 from './img/projects/wallet/320.jpg';
-import walletImage320x2 from './img/projects/wallet/320@2x.jpg';
-import walletImage768 from './img/projects/wallet/768.jpg';
-import walletImage768x2 from './img/projects/wallet/768@2x.jpg';
-import walletImage1280 from './img/projects/wallet/1280.jpg';
-import walletImage1280x2 from './img/projects/wallet/1280@2x.jpg';
+import walletImage320 from '../img/projects/wallet/320.jpg';
+import walletImage320x2 from '../img/projects/wallet/320@2x.jpg';
+import walletImage768 from '../img/projects/wallet/768.jpg';
+import walletImage768x2 from '../img/projects/wallet/768@2x.jpg';
+import walletImage1280 from '../img/projects/wallet/1280.jpg';
+import walletImage1280x2 from '../img/projects/wallet/1280@2x.jpg';
 
 // --------------green_harvest--------------------
-import greenHarvestImage320 from './img/projects/green_harvest/320.jpg';
-import greenHarvestImage320x2 from './img/projects/green_harvest/320@2x.jpg';
-import greenHarvestImage768 from './img/projects/green_harvest/768.jpg';
-import greenHarvestImage768x2 from './img/projects/green_harvest/768@2x.jpg';
-import greenHarvestImage1280 from './img/projects/green_harvest/1280.jpg';
-import greenHarvestImage1280x2 from './img/projects/green_harvest/1280@2x.jpg';
+import greenHarvestImage320 from '../img/projects/green_harvest/320.jpg';
+import greenHarvestImage320x2 from '../img/projects/green_harvest/320@2x.jpg';
+import greenHarvestImage768 from '../img/projects/green_harvest/768.jpg';
+import greenHarvestImage768x2 from '../img/projects/green_harvest/768@2x.jpg';
+import greenHarvestImage1280 from '../img/projects/green_harvest/1280.jpg';
+import greenHarvestImage1280x2 from '../img/projects/green_harvest/1280@2x.jpg';
 
 // --------------english_excellence--------------------
-import englishExcellenceImage320 from './img/projects/english_excellence/320.jpg';
-import englishExcellenceImage320x2 from './img/projects/english_excellence/320@2x.jpg';
-import englishExcellenceImage768 from './img/projects/english_excellence/768.jpg';
-import englishExcellenceImage768x2 from './img/projects/english_excellence/768@2x.jpg';
-import englishExcellenceImage1280 from './img/projects/english_excellence/1280.jpg';
-import englishExcellenceImage1280x2 from './img/projects/english_excellence/1280@2x.jpg';
+import englishExcellenceImage320 from '../img/projects/english_excellence/320.jpg';
+import englishExcellenceImage320x2 from '../img/projects/english_excellence/320@2x.jpg';
+import englishExcellenceImage768 from '../img/projects/english_excellence/768.jpg';
+import englishExcellenceImage768x2 from '../img/projects/english_excellence/768@2x.jpg';
+import englishExcellenceImage1280 from '../img/projects/english_excellence/1280.jpg';
+import englishExcellenceImage1280x2 from '../img/projects/english_excellence/1280@2x.jpg';
 
 export const projectsArray = [
   // --------------wallet--------------------

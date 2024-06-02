@@ -1,5 +1,5 @@
 import { projectsArray } from './projectsArray.js';
-import visitSvg from './img/icons/sprite.svg';
+import visitSvg from '../img/icons/sprite.svg';
 
 const refs = {
   loadMoreBtnEl: document.querySelector('.btn-load-more'),
