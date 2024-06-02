@@ -92,6 +92,7 @@
   margin-left: auto;
   margin-right: auto;
   background-color: var(--bg-color);
+  color: var(--text-color);
   padding: 12px 24px;
   border: 0;
 
