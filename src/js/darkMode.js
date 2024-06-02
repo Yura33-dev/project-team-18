@@ -1,5 +1,7 @@
-const btn = document.querySelector('.darkmode > button');
+const btns = document.querySelectorAll('.darkmode > button');
 
-btn.addEventListener('click', () =>
-  document.body.classList.toggle('dark-mode')
+btns.forEach(btn =>
+  btn.addEventListener('click', () =>
+    document.body.classList.toggle('dark-mode')
+  )
 );
