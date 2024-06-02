@@ -3,7 +3,7 @@ export const projectsArray = [
     projectName: 'Wallet webservice',
     projectLink: 'https://github.com/Yura33-dev/project-team-18',
     description: 'Wallet webservice picture',
-    previewImg: './img/projects/./img/projects/wallet/1280.jpg',
+    previewImg: './img/projects/wallet/1280.jpg',
     setImages320:
       './img/projects/wallet/320.jpg 1x, ./img/projects/wallet/320@2x.jpg 2x',
     setImages768:
