@@ -1,0 +1,112 @@
+/*============================= max-width: 767px =====================================*/
+
+.header-container {
+    max-width: 375px;
+    padding: 16px 0;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-family: "Impact", sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.05em;
+    text-align: left;
+    color: var(--text-color);
+}
+
+.logo-span {
+    color: #00B068;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .header-container {
+        max-width: 768px;
+        justify-content: space-between;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .menu-open-btn {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        line-height: 0;
+        stroke: #292929;
+        ;
+    }
+
+    .menu-open-btn-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+}
+
+/*============================= max-width: 767px =====================================*/
+
+/*=========================== @media (min-width: 768px) =================================*/
+
+@media only screen and (min-width: 768px) {
+
+    .menu-open-btn {
+        display: none;
+    }
+
+    .header-container {
+        max-width: 1280px;
+        padding: 0;
+    }
+
+    .page-nav {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 32px;
+    }
+
+    .nav-menu {
+        display: flex;
+        gap: 40px;
+    }
+
+    .nav-menu-link {
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        text-align: left;
+        color: var(--text-color);
+        display: block;
+        padding: 36px 0;
+        font-family: "Poppins", sans-serif;
+        transition: color var(--transition);
+        transition: color 250ms linear;
+    }
+
+    .nav-menu-link:focus,
+    .nav-menu-link:active {
+        color: #00B068;
+    }
+}
+
+/*=========================== @media (min-width: 1280px) =================================*/
+
+@media only screen and (min-width: 1280px) {
+
+    .nav-menu-link:hover,
+    .nav-menu-link:focus,
+    .nav-menu-link:active {
+        color: #00B068;
+    }
+}

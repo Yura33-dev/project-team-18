@@ -1,0 +1,297 @@
+/*============================= max-width: 767px =====================================*/
+.hero-background-container {
+    background-position: right top;
+}
+
+.hero-hello-title {
+    display: flex;
+}
+
+.hero-custom-button {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-align: left;
+    font-family: "Poppins", sans-serif;
+    line-height: 1.56;
+}
+
+.hero-custom-button .hero-arrow {
+    margin-right: 12px;
+    height: 28px;
+}
+
+.hero-icon {
+    width: 28px;
+    --color2: #2ecc71;
+    max-height: 100px;
+    height: 28px;
+}
+
+.hero-custom-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-25%, -50%);
+    width: 165px;
+    height: 92px;
+    background-color: #00B06833;
+    border-radius: 16px;
+    z-index: -1;
+    transition: background-color var(--transition);
+    transition: background-color 250ms linear;
+}
+
+.hero-custom-button:hover::after,
+.hero-custom-button:active::after {
+    background-color: #00B06899;
+    ;
+}
+
+.hero-moto {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.56;
+    letter-spacing: 0.03em;
+    text-align: center;
+    background-color: var(--accent-bg-color);
+    padding: 32px 10px;
+    font-family: "Poppins", sans-serif;
+    color: var(--text-color);
+
+}
+
+.hero-moto-p {
+    max-width: 320px;
+    margin: auto;
+}
+
+.hero-moto span {
+    color: var(--accent-green);
+}
+
+/* =================== media ======================*/
+
+@media only screen and (max-width: 767px) {
+
+    .hero-background-container {
+        background-image: url('../img/menu/decor-bg-mob.png');
+        background-size: cover;
+    }
+
+    .hero-hello-title {
+        flex-direction: column;
+    }
+
+    .hero-title-black {
+        font-family: "Impact", sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        color: var(--text-color);
+        margin-bottom: 8px;
+        width: 165px;
+        text-align: right;
+    }
+
+    .hero-hello-container {
+        margin-bottom: 8px;
+        padding-top: 16px;
+    }
+
+    .hero-title-green {
+        font-family: "Impact", sans-serif;
+        font-size: 64px;
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+        text-align: right;
+        color: var(--accent-green);
+        margin-bottom: 44px;
+    }
+
+    .hero-fstack-container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 64px;
+    }
+
+    .hero-social-container {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .hero-background-container {
+        background-image: url('../img/menu/decor-bg-mob@2x.png');
+    }
+}
+
+/*=========================== @media (min-width: 768px) =================================*/
+
+@media only screen and (min-width: 768px) {
+
+    .hero-background-container {
+        background-image: url('../img/decor-bg-tab.png');
+        background-size: cover;
+    }
+
+    .hero-hello-container {
+        margin-bottom: 40px;
+        padding-top: 68px;
+    }
+
+    .hero-title-black {
+        font-size: 136px;
+        font-weight: 400;
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+        margin-right: 28px;
+        font-family: "Impact", sans-serif;
+        color: var(--text-color);
+        width: 340px;
+        text-align: right;
+    }
+
+    .hero-fstack-container {
+        flex-direction: column;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 108px;
+    }
+
+    .hero-social-ul {
+        display: flex;
+        gap: 24px;
+    }
+
+    .hero-social-a {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: left;
+        color: var(--text-color);
+        display: block;
+        padding: 12px 0;
+        font-family: "Poppins", sans-serif;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        transition: color var(--transition);
+        transition: color 250ms linear;
+    }
+
+    .hero-social-a:focus,
+    .hero-social-a:active {
+        color: var(--accent-green);
+    }
+
+    .hero-title-green {
+        font-size: 136px;
+        font-weight: 400;
+        text-align: right;
+        color: var(--accent-green);
+        line-height: 1.15;
+        letter-spacing: 0.01em;
+        font-family: "Impact", sans-serif;
+    }
+
+    .hero-custom-button {
+        font-size: 20px;
+        margin-top: 72px;
+        line-height: 1.6;
+    }
+
+    .hero-custom-button::after {
+        width: 261px;
+        height: 96px;
+        transform: translate(-80%, -50%);
+    }
+
+    .hero-moto {
+        font-size: 36px;
+        font-weight: 500;
+        line-height: 1.33;
+        letter-spacing: 0.01em;
+        text-align: center;
+        padding: 64px 32px;
+    }
+
+    .hero-moto-p {
+        max-width: 704px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (min-resolution: 192dpi) {
+    .hero-background-container {
+        background-image: url('../img/decor-bg-tab@2x.png');
+    }
+}
+
+/*=========================== @media (min-width: 1280px) =================================*/
+
+@media only screen and (min-width: 1280px) {
+
+    .hero-background-container {
+        background-image: url('../img/decor-bg-web.png');
+        background-size: cover;
+    }
+
+    .hero-hello-container {
+        padding-top: 88px;
+    }
+
+    .hero-title-black {
+        margin-right: 32px;
+        width: 384px;
+    }
+
+    .hero-fstack-container {
+        transform: translate(0, -45%);
+        margin-bottom: -70px;
+    }
+
+    .hero-fstack-title {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: center;
+        /* transform: translate(0, 5%); */
+        width: 100%;
+    }
+
+    .hero-social-a:hover,
+    .hero-social-a:focus,
+    .hero-social-a:active {
+        color: var(--accent-green);
+    }
+
+    .hero-custom-button {
+        margin-top: 112px;
+    }
+
+    .hero-custom-button::after {
+        transform: translate(0, -50%);
+    }
+
+    .hero-moto {
+        padding: 120px 136px;
+    }
+
+    .hero-moto-p {
+        max-width: 1008px;
+    }
+}
+
+@media only screen and (min-width: 1280px) and (min-resolution: 192dpi) {
+    .hero-background-container {
+        background-image: url('../img/decor-bg-web@2x.png');
+    }
+}
