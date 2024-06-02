@@ -48,8 +48,8 @@ document.querySelector('form').addEventListener('submit', function(event) {
     const comment = document.querySelector('textarea[name="comment"]').value;
 
     axios.post('https://portfolio-js.b.goit.study/api', {
-        email: email,
-        comment: comment
+        "email": "test@gmail.com",
+        "comment": "User's comment"
     })
     .then(function(response) {
         const serverResponseModal = document.createElement('div');
