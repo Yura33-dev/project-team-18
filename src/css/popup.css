@@ -1,15 +1,14 @@
 .modal-container {
     display: flex;
+    max-width: 320px;
     justify-content: center;
     align-items: center;
     border: 1px solid rgba(250, 250, 250, 0.1);
     border-radius: 16px;
     padding: 48px 32px;
-    width: 320px;
-    height: 328px;
-    margin: 214px 20px;
-    background-color: white;
+    background-color: #F0F0F0;
     box-sizing: border-box;
+    position: relative;
 }
 
 .icon-modal-close {
@@ -25,9 +24,6 @@
 
 
 .modal-text {
-    width: 256px;
-    height: 232px;
-    font-family: sans-serif;
     font-weight: 300;
     font-size: 16px;
     line-height: 150%;
@@ -44,4 +40,41 @@
     text-transform: uppercase;
     text-align: center;
     color: #00B068;
+}
+.rent-input::placeholder{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        color: rgba(41, 41, 41, 0.4);
+}
+.rent-input{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 150%;
+        letter-spacing: 0.03em;
+        color: #292929;
+}
+.message-together::placeholder{
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: rgba(41, 41, 41, 0.4);
+}
+.message-together {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 150%;
+    letter-spacing: 0.03em;
+    color: #292929;
+}
+
+
+
+
+@media screen and (min-width: 768px){
+.modal-container{
+    max-width: 492px;
+}
 }

@@ -1,89 +1,57 @@
-document.querySelector('.overlay').classList.add('is-active');
-const modalContainer = document.createElement('div');
-modalContainer.classList.add('modal-container');
+import axios from 'axios';
 
-const closeButton = document.createElement('button');
-closeButton.setAttribute('type', 'button');
-closeButton.classList.add('icon-modal-close');
-closeButton.innerHTML = `
-    <svg width="24" height="24">
-        <use href="./img/icons/sprite.svg#icon-close"></use>
-    </svg>
-`;
+const overlay = document.querySelector('.overlay');
+const form = document.querySelector('.form-message');
 
+form.addEventListener('submit', function (event) {
+  event.preventDefault();
 
-const modalText = document.createElement('p');
-modalText.classList.add('modal-text');
-modalText.innerHTML = `
-    <span class="span-modal">Thank you for your interest in cooperation!<br></span> The manager will contact you shortly to discuss
-    further <br> details and opportunities for<br>cooperation. Please stay in touch.
-`;
+  const { email, comment } = form.elements;
 
-
-modalContainer.appendChild(closeButton);
-modalContainer.appendChild(modalText);
-
-
-document.querySelector('.overlay').appendChild(modalContainer);
-
-document.querySelector('.overlay').addEventListener('click', function(event) {
-    if (event.target === document.querySelector('.overlay')) {
-        document.querySelector('.overlay').classList.remove('is-active');
-        document.querySelector('.modal-container').remove();
-    }
-});
-
-
-document.addEventListener('keydown', function(event) {
-    if (event.key === 'Escape') {
-        document.querySelector('.overlay').classList.remove('is-active');
-        document.querySelector('.modal-container').remove();
-    }
-});
-
-document.querySelector('form').addEventListener('submit', function(event) {
-    event.preventDefault(); 
-
-    const email = document.querySelector('input[name="email"]').value;
-    const comment = document.querySelector('textarea[name="comment"]').value;
-
-    axios.post('https://portfolio-js.b.goit.study/api', {
-        "email": "test@gmail.com",
-        "comment": "User's comment"
+  axios
+    .post('https://portfolio-js.b.goit.study/api/requests', {
+      email: email.value,
+      comment: comment.value,
     })
-    .then(function(response) {
-        const serverResponseModal = document.createElement('div');
-        serverResponseModal.classList.add('modal-container');
+    .then(response => {
+      console.log(response);
 
-        const responseCloseButton = document.createElement('button');
-        responseCloseButton.setAttribute('type', 'button');
-        responseCloseButton.classList.add('icon-modal-close');
-        responseCloseButton.innerHTML = `
-            <svg width="24" height="24">
-                <use href="./img/icons/sprite.svg#icon-close"></use>
-            </svg>
-        `;
+      const serverResponseModal = document.createElement('div');
+      serverResponseModal.classList.add('modal-container');
 
-        const responseModalText = document.createElement('p');
-        responseModalText.classList.add('modal-text');
-        responseModalText.innerHTML = `
-            <span class="span-modal">${response.data.title}<br></span> ${response.data.message}
-        `;
-
-        serverResponseModal.appendChild(responseCloseButton);
-        serverResponseModal.appendChild(responseModalText);
-
-        document.querySelector('.overlay').appendChild(serverResponseModal);
-        document.querySelector('.overlay').classList.add('is-active');
-
-        responseCloseButton.addEventListener('click', function() {
-            document.querySelector('.overlay').classList.remove('is-active');
-            serverResponseModal.remove();
-        });
+      serverResponseModal.innerHTML = `
+        <button type="button" class="icon-modal-close">
+        <svg width="24" height="24">
+            <use href="./img/icons/sprite.svg#icon-close"></use>
+        </svg>
+        </button>
+        <p class="modal-text">
+            <span class="span-modal">${response.data.title}</span>
+            <br>
+            ${response.data.message}
+        </p>
+      `;
+      overlay.innerHTML = '';
+      overlay.appendChild(serverResponseModal);
+      overlay.classList.toggle('is-active');
     })
-    .catch(function(error) {
-        console.error('There was an error submitting the form:', error);
-    });
+    .catch(e => console.log(e));
 });
 
+overlay.addEventListener('click', function (event) {
+  if (event.target.closest('.icon-modal-close')) {
+    overlay.firstElementChild.remove();
+    overlay.classList.toggle('is-active');
+  } else if (event.target.classList.contains('overlay')) {
+    overlay.firstElementChild.remove();
+    overlay.classList.toggle('is-active');
+  }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape' && overlay.classList.contains('is-active')) {
+    overlay.firstElementChild.remove();
+    overlay.classList.toggle('is-active');
+  }
+});
 
