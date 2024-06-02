@@ -100,6 +100,7 @@
     gap: 16px;
 }
 .title-contacts-tables{
+    gap: 16px;
     margin-bottom: 40px;
 }
 
@@ -129,7 +130,6 @@
 .title-contacts-tables {
         display: flex;
         white-space: nowrap;
-        gap: 16px;
         margin-bottom: 60px;
 }
 
