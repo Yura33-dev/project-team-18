@@ -193,9 +193,23 @@ img {
   .section {
     margin-bottom: var(--desktop-mb);
   }
+
+  .my-projects,
+  .reviews {
+    margin-bottom: 0;
+  }
+
+  .benefits .wrapper,
+  .work-together {
+    padding-top: 164px;
+  }
 }
 
 .overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: fixed;
   top: 0;
   left: 0;
