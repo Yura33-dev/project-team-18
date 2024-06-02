@@ -92,13 +92,13 @@
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-    .benefits {
+    .wrapper {
       background-image: url(../img/benefits-decor-bd-@2x.png);
     }
   }
 }
 @media only screen and (min-width: 1280px) {
-  .benefits {
+  .wrapper {
     background-image: url(../img/benefits-decor-bg.png);
     background-repeat: no-repeat;
     background-position: top 0 right 32px;
