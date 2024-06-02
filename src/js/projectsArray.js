@@ -70,7 +70,7 @@ export const projectsArray = [
     description: 'Energy flow webservice  picture',
     previewImg: './img/projects/energy_flow/1280.jpg',
     setImages320:
-      './img/projects/energy_flow/20.jpg 1x, ./img/projects/energy_flow/320@2x.jpg 2x',
+      './img/projects/energy_flow/320.jpg 1x, ./img/projects/energy_flow/320@2x.jpg 2x',
     setImages768:
       './img/projects/energy_flow/768.jpg 1x, ./img/projects/energy_flow/768@2x.jpg 2x',
     setImages1280:
