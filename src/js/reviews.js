@@ -3,7 +3,7 @@ import 'swiper/css/bundle';
 
 document.addEventListener('DOMContentLoaded',
     function () {
-        console.log('DOMContentLoaded');
+        
         fetchData();
     });
 
@@ -20,7 +20,7 @@ async function fetchData() {
             throw new Error('Network response was not ok');
         }
         const data = await response.json();
-        console.log('data: ', data);
+        
         createSlides(data);
     } catch (error) {
         document.getElementById('error-message').innerText = 'Not found';
@@ -36,7 +36,7 @@ function createSlides(data) {
         return;
     }
     data.forEach(review => {
-        console.log('review: ', review);
+        
         const slide = document.createElement('li');
         slide.classList.add('swiper-slide');
         slide.innerHTML = `
