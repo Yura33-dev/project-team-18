@@ -84,8 +84,23 @@
 }
 
 @media only screen and (min-width: 768px) {
+  .bg-wrapper {
+    background-image: url('../img/about-decor@1.png');
+    background-repeat: no-repeat;
+    background-position: bottom 160px right 0;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-wrapper {
+      background-image: url('../img/about-decor@2.png');
+      background-size: 50%;
+    }
+  }
+
   .title-about {
-    font-size: 108px;
+    font-size: 80px;
     line-height: 1.15;
     letter-spacing: 0.02em;
   }
@@ -94,6 +109,7 @@
     gap: 32px;
     flex-direction: row;
     align-items: flex-end;
+    margin-bottom: 60px;
   }
 
   .about-image,
@@ -102,130 +118,46 @@
     flex-shrink: 1;
   }
 
-  /* .my-photo {
-    border-radius: 16px;
-    width: 336px;
-    height: 392px;
-    position: absolute;
-    top: 532px;
-  } */
-
-  /* .bio {
-    margin-left: auto;
-    margin-bottom: 140px;
-    min-width: 336px;
-    max-width: 336px;
-    height: 680px;
-  }
-  .text-mod1 {
-    min-height: 264px;
-    max-height: 264px;
-  } */
-
-  .decor {
-    /* background-image: url(../img/decor-image.jpg); */
-    /* width: 336px;
-    height: 100px;
-    position: absolute;
-    top: 856px;
-    left: 368px;
-    background-repeat: no-repeat; */
-  }
-
-  .classic-title {
-    /* font-size: 36px;
-    line-height: 1.33333;
-    letter-spacing: 0.01em; */
-  }
-
-  .text-wrap {
-    /* min-width: 336px;
-    max-width: 336px;
-    height: 600px; */
+  .bio-wrapper {
+    margin: 0;
+    padding-bottom: 85px;
   }
 
   .content-wrap {
-    /* width: 704px;
-    max-width: 704px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: row;
-    gap: 32px; */
+    gap: 32px;
   }
 
-  .education {
-    /* width: 336px;
-    height: 280px; */
-  }
-
+  .education,
   .role {
-    /* width: 336px;
-    height: 184px; */
-  }
-  .education-list {
-    /* min-height: 200px;
-    max-height: 200px; */
-  }
-
-  .role-list {
-    /* min-height: 104px;
-    max-height: 104px; */
+    flex-basis: calc((100% - 32px) / 2);
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .bio {
-    /* min-width: 488px;
-    max-width: 488px;
-    height: 488px;
-    margin-bottom: 312px; */
-  }
-  .decor {
-    /* background-image: url(../img/decor-image.jpg); */
-    /* width: 384px;
-    height: 288px;
-    position: absolute;
-    top: 692px;
-    left: 832px; */
+  .bg-wrapper {
+    background-position: bottom 270px right 0;
   }
 
-  .text-wrap {
-    /* min-width: 488px;
-    max-width: 488px;
-    height: 408px; */
+  .about-wrapper {
+    gap: 136px;
+    margin-bottom: 80px;
   }
 
-  .text-mod1 {
-    /* min-height: 168px;
-    max-height: 168px; */
+  .about-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .bio-wrapper {
+    max-width: 488px;
+    padding-bottom: 232px;
   }
 
   .content-wrap {
-    /* min-width: 904px;
-    max-width: 904px;
-    height: 280px;
     gap: 136px;
-    position: absolute;
-    top: 964px;
-    left: 208px; */
-  }
-
-  .my-photo {
-    /* border-radius: 16px;
-    width: 384px;
-    height: 448px;
-    position: absolute;
-    top: 436px;
-    left: 208px; */
-  }
-
-  .education {
-    /* width: 384px;
-    height: 280px; */
-  }
-
-  .role {
-    /* width: 384px; */
+    max-width: 904px;
+    margin-left: 210px;
   }
 }
