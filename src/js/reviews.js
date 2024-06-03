@@ -42,7 +42,7 @@ function createSlides(data) {
         slide.innerHTML = `
         <div class="coment-autor" >${review.review}</div>
         <div class="author">
-            <img src="${review.avatar_url}"/>
+            <img class="author-photos"  src="${review.avatar_url}" alt="author-photo"/>
             <div class="name-author">${review.author}</div>
         </div>
         `;
@@ -96,6 +96,7 @@ function initializeSwiper() {
             },
         },
     });
+   
     
 
 }

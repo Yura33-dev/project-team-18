@@ -42,17 +42,18 @@
     width: 96px;
     height: 40px;
     position: absolute;
-    bottom: -55px;
-    right: 20px;
+    bottom: -60px;
+    right: 10px;
 }
 .swiper-navigation-wrapper .swiper-button-prev {
-    margin-right: 10px;
+    margin-left: -20px;
+   
 }
+
 .swiper-navigation-wrapper .swiper-button-prev,
 .swiper-navigation-wrapper .swiper-button-next {
         border: 1px solid rgba(41, 41, 41, 0.3);
         border-radius: 8px;
-        margin: -12px;
         width: 40px;
         height: 40px;
         display: flex;
@@ -81,13 +82,23 @@
 .swiper-navigation-wrapper .custom-prev::after {
     content: '';
 }
-.swiper-navigation-wrapper .custom-next svg, .swiper-navigation-wrapper .custom-prev svg {
+.swiper-navigation-wrapper .custom-next svg.arrow-custom-right, 
+.swiper-navigation-wrapper .custom-prev svg.arrow-custom-left {
             width: 24px;
             height: 24px;
             --color3: #292929;
             stroke: black;
             fill: none;
 }
+body.dark-mode  .swiper-button-next.custom-next svg.arrow-custom-right,
+body.dark-mode .swiper-button-prev.custom-prev svg.arrow-custom-left {
+        width: 24px;
+        height: 24px;
+        --color3: #fff;
+        stroke: #fff;
+        fill: none;
+}
+
 .swiper-container {
     position: relative;
 }
@@ -109,14 +120,13 @@
 .author {
     display: flex;
     align-items: center;
+}
 
-    img {
+.author-photos {
         border-radius: 24px;
         width: 40px;
         height: 40px;
-    }
 }
-
 .name-author {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -151,7 +161,7 @@
         height: 224px;
    }
    .swiper-navigation-wrapper {
-        right: 32px;
+        right: 20px;
    }
    .coment-autor {
         max-width: 640px;
