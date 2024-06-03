@@ -5,18 +5,32 @@
         <a class="logo" href="./index.html"
           >LLOYD<span class="logo-span">JEFFERSON.</span></a
         >
-        <ul class="nav-menu">
-          <li class="nav-menu-item">
-            <a class="nav-menu-link smooth-scroll" href="#about_me">About me</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-link smooth-scroll" href="#projects">Projects</a>
-          </li>
-          <li class="nav-menu-item">
-            <a class="nav-menu-link smooth-scroll" href="#contacts">Contacts</a>
-          </li>
-        </ul>
+
+        <div class="nav-wrapper">
+          <div class="darkmode">
+            <button type="button" aria-label="Toggle dark mode"></button>
+          </div>
+
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#about_me"
+                >About me</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#contacts"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
       </nav>
+
       <button class="menu-open-btn" type="button" id="openbutton">
         <svg class="menu-open-btn-icon" aria-label="menu open icon">
           <use href="./img/icons/sprite.svg#icon-burger"></use>
@@ -53,6 +67,11 @@
         <a class="sidebar-nav-link smooth-scroll" href="#contacts" id="cont"
           >Contacts</a
         >
+      </li>
+      <li class="sidebar-nav-item">
+        <div class="darkmode">
+          <button type="button" aria-label="Toggle dark mode"></button>
+        </div>
       </li>
     </ul>
   </div>

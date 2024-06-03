@@ -1,0 +1,62 @@
+.darkmode {
+  width: 48px;
+  height: 24px;
+  background-color: var(--accent-bg-color);
+  border-radius: 16px;
+}
+
+.darkmode button {
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+
+  position: relative;
+}
+
+.darkmode button::before {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #2a2d32;
+  opacity: 0;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 3;
+
+  transform: translateX(2px) translateY(-50%);
+
+  transition: transform var(--transition);
+}
+
+.darkmode button::after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--accent-green);
+
+  transition: transform var(--transition);
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 2;
+
+  transform: translateX(2px) translateY(-50%);
+}
+
+.dark-mode .darkmode button::after {
+  transform: translateX(28px) translateY(-50%);
+}
+
+.dark-mode .darkmode button::before {
+  transform: translateX(20px) translateY(-50%);
+  opacity: 1;
+}
