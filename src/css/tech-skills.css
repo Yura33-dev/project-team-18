@@ -13,7 +13,7 @@
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  background-color: #fff;
+  background-color: var(--bg-color);
   height: 245px;
 }
 
@@ -28,11 +28,11 @@
 }
 
 .green-cube {
-  background-color: #bcdfd1;
+  background-color: var(--accent-light-green);
 }
 
 .black-cube {
-  background-color: #e4e5e6;
+  background-color: var(--accent-bg-color);
   transform: rotate(2deg);
 }
 
@@ -52,7 +52,7 @@
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
+  color: var(--text-color);
 }
 
 .color-mode {
