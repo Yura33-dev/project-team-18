@@ -1,13 +1,3 @@
-.container {
-  min-width: 320px;
-  max-width: 360px;
-  margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
-  margin-bottom: 80px;
-  position: relative;
-}
-
 .about-me-photo {
   margin-bottom: 40px;
 }
@@ -19,65 +9,45 @@
   line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  text-align: right;
   margin-bottom: 40px;
+}
+
+.about-wrapper {
   display: flex;
-  align-items: flex-start;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.bio-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 40px;
 }
 
 .me {
-  margin-left: 18px;
   color: #00b068;
-}
-
-.my-photo {
-  object-fit: cover;
 }
 
 .about-image {
   border-radius: 16px;
 }
 
-.bio {
-  margin-bottom: 40px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 32px;
-  width: 320px;
-}
-
 .classic-title {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 500;
-  font-size: 32px;
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-}
-
-.text-wrap {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 24px;
-  width: 320px;
+  margin-bottom: 8px;
 }
 
 .text-style {
-  font-family: 'Poppins', sans-serif;
-  font-weight: 300;
-  font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  display: flex;
 }
 
 .edu-role-mod::before {
-  display: inline-block;
   content: '';
+  display: block;
   border-radius: 1px;
   width: 4px;
   height: 4px;
@@ -85,192 +55,109 @@
   transform: rotate(-180deg);
   line-height: 24px;
   margin: 10px;
-  flex: 1 0 auto;
+  flex: 0 0 auto;
 }
 
 .content-wrap {
-  width: 320px;
-}
-
-.education {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
-  gap: 32px;
+  gap: 40px;
 }
 
-.education-list {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-direction: column;
-  gap: 12px;
-  height: 216px;
-}
-
+.education,
 .role {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 32px;
 }
 
+.education-list,
 .role-list {
   display: flex;
-  align-items: flex-start;
-  justify-content: flex-start;
   flex-direction: column;
   gap: 12px;
+}
+
+.text-style {
+  display: flex;
+  gap: 8px;
 }
 
 @media only screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
-    padding-right: 32px;
-    padding-left: 32px;
-    margin: 0 auto;
-    height: 1264px;
-    margin-bottom: 124px;
+  .bg-wrapper {
+    background-image: url('../img/about-decor@1.png');
+    background-repeat: no-repeat;
+    background-position: bottom 160px right 0;
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .bg-wrapper {
+      background-image: url('../img/about-decor@2.png');
+      background-size: 50%;
+    }
   }
 
   .title-about {
-    font-size: 108px;
-    line-height: 1.14815;
+    font-size: 80px;
+    line-height: 1.15;
     letter-spacing: 0.02em;
   }
 
-  .my-photo {
-    border-radius: 16px;
-    width: 336px;
-    height: 392px;
-    position: absolute;
-    top: 532px;
+  .about-wrapper {
+    gap: 32px;
+    flex-direction: row;
+    align-items: flex-end;
+    margin-bottom: 60px;
   }
 
-  .bio {
-    margin-left: auto;
-    margin-bottom: 140px;
-    min-width: 336px;
-    max-width: 336px;
-    height: 680px;
-  }
-  .text-mod1 {
-    min-height: 264px;
-    max-height: 264px;
+  .about-image,
+  .bio-wrapper {
+    flex-basis: calc((100% - 32px) / 2);
+    flex-shrink: 1;
   }
 
-  .decor {
-    background-image: url(../img/decor-image.jpg);
-    width: 336px;
-    height: 100px;
-    position: absolute;
-    top: 856px;
-    left: 368px;
-    background-repeat: no-repeat;
-  }
-
-  .classic-title {
-    font-size: 36px;
-    line-height: 1.33333;
-    letter-spacing: 0.01em;
-  }
-
-  .text-wrap {
-    min-width: 336px;
-    max-width: 336px;
-    height: 600px;
+  .bio-wrapper {
+    margin: 0;
+    padding-bottom: 85px;
   }
 
   .content-wrap {
-    width: 704px;
-    max-width: 704px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
     flex-direction: row;
     gap: 32px;
   }
 
-  .education {
-    width: 336px;
-    height: 280px;
-  }
-
+  .education,
   .role {
-    width: 336px;
-    height: 184px;
-  }
-  .education-list {
-    min-height: 200px;
-    max-height: 200px;
-  }
-
-  .role-list {
-    min-height: 104px;
-    max-height: 104px;
+    flex-basis: calc((100% - 32px) / 2);
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-    height: 1244px;
-    margin-bottom: 164px;
+  .bg-wrapper {
+    background-position: bottom 270px right 0;
   }
 
-  .bio {
-    min-width: 488px;
+  .about-wrapper {
+    gap: 136px;
+    margin-bottom: 80px;
+  }
+
+  .about-image {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .bio-wrapper {
     max-width: 488px;
-    height: 488px;
-    margin-bottom: 312px;
-  }
-  .decor {
-    background-image: url(../img/decor-image.jpg);
-    width: 384px;
-    height: 288px;
-    position: absolute;
-    top: 692px;
-    left: 832px;
-  }
-
-  .text-wrap {
-    min-width: 488px;
-    max-width: 488px;
-    height: 408px;
-  }
-
-  .text-mod1 {
-    min-height: 168px;
-    max-height: 168px;
+    padding-bottom: 232px;
   }
 
   .content-wrap {
-    min-width: 904px;
-    max-width: 904px;
-    height: 280px;
     gap: 136px;
-    position: absolute;
-    top: 964px;
-    left: 208px;
-  }
-
-  .my-photo {
-    border-radius: 16px;
-    width: 384px;
-    height: 448px;
-    position: absolute;
-    top: 436px;
-    left: 208px;
-  }
-
-  .education {
-    width: 384px;
-    height: 280px;
-  }
-
-  .role {
-    width: 384px;
+    max-width: 904px;
+    margin-left: 210px;
   }
 }
