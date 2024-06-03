@@ -1,1 +1,78 @@
-<header class="header"></header>
+<header class="header" id="header">
+  <div class="container">
+    <div class="header-container">
+      <nav class="page-nav">
+        <a class="logo" href="./index.html"
+          >LLOYD<span class="logo-span">JEFFERSON.</span></a
+        >
+
+        <div class="nav-wrapper">
+          <div class="darkmode">
+            <button type="button" aria-label="Toggle dark mode"></button>
+          </div>
+
+          <ul class="nav-menu">
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#about-me"
+                >About me</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#projects"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-menu-item">
+              <a class="nav-menu-link smooth-scroll" href="#work-together"
+                >Contacts</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <button class="menu-open-btn" type="button" id="openbutton">
+        <svg class="menu-open-btn-icon" aria-label="menu open icon">
+          <use href="./img/icons/sprite.svg#icon-burger"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="backdrop" id="mobile-menu">
+  <div class="sidebar-menu">
+    <div class="sidebar-header-container">
+      <a class="sidebar-logo" id="sidelogo" href="./index.html"
+        >LLOYD<span class="logo-span">JEFFERSON.</span></a
+      >
+      <button class="menu-close-btn" type="button" id="closebutton">
+        <svg class="menu-close-icon" aria-label="menu close icon">
+          <use href="./img/icons/sprite.svg#icon-close"></use>
+        </svg>
+      </button>
+    </div>
+    <ul class="sidebar-nav-list">
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#about_me" id="ab_me"
+          >About me</a
+        >
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#projects" id="prj"
+          >Projects</a
+        >
+      </li>
+      <li class="sidebar-nav-item">
+        <a class="sidebar-nav-link smooth-scroll" href="#contacts" id="cont"
+          >Contacts</a
+        >
+      </li>
+      <li class="sidebar-nav-item">
+        <div class="darkmode">
+          <button type="button" aria-label="Toggle dark mode"></button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

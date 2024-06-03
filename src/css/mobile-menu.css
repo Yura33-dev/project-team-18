@@ -1,0 +1,107 @@
+.backdrop {
+    visibility: hidden;
+}
+
+@media only screen and (max-width: 767px) {
+
+    .backdrop {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translate(0);
+        width: 100%;
+        height: 100%;
+        z-index: 9999;
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 250ms linear, transform 250ms linear,
+            visibility 250ms linear;
+    }
+
+    .backdrop.is-open {
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+        transform: translate(-50%);
+    }
+
+    .sidebar-menu {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 100%;
+        min-height: 100%;
+        display: flex;
+        flex-direction: column;
+        background-color: var(--bg-color);
+        background-image: url('../img/menu/decor-bg-mob.png');
+        background-size: cover;
+    }
+
+    .sidebar-header-container {
+        display: flex;
+        padding: 16px 20px;
+        justify-content: space-between;
+        /* max-width: 375px;
+        margin: 0 auto;
+        gap: 85px; */
+        align-items: center;
+    }
+
+    .sidebar-logo {
+        font-family: Impact, sans-serif;
+        font-size: 24px;
+        line-height: 1;
+        letter-spacing: 0.06em;
+        text-align: left;
+    }
+
+    .menu-close-btn {
+        padding: 0;
+        line-height: 0;
+        border: none;
+        background-color: transparent;
+        width: 32px;
+        height: 32px;
+    }
+
+    .menu-close-icon {
+        width: 30px;
+        height: 30px;
+        --color3: var(--text-color);
+    }
+
+    .sidebar-nav-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 24px;
+        justify-content: center;
+        flex: 1 1 auto;
+    }
+
+    .sidebar-nav-link {
+        position: relative;
+        font-size: 16px;
+        font-weight: 300;
+        line-height: 1.5;
+        letter-spacing: 0.03em;
+        text-align: left;
+        font-family: "Poppins", sans-serif;
+        color: var(--text-color);
+    }
+
+}
+
+@media only screen and (max-width: 767px) and (min-resolution: 192dpi) {
+    .sidebar-menu {
+        background-image: url('../img/menu/decor-bg-mob@2x.png');
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .backdrop {
+        display: none;
+    }
+}
