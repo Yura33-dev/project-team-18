@@ -1,36 +1,42 @@
 <section class="section about">
   <div class="container">
-    <div class="about-me-photo">
-      <h2 class="title-about">ABOUT <span class="me"> ME</span></h2>
-      <picture class="my-photo">
+    <h2 class="title-about">About <span class="me">me</span></h2>
+
+    <div class="about-wrapper">
+      <picture class="about-image">
         <source
-          srcset="./img/img-desktop.jpg 1x, ./img/desktop-2x.jpg 2x"
+          srcset="
+            ./img/about/about-desktop@1.jpg 1x,
+            ./img/about/about-desktop@2.jpg 2x
+          "
           media="(min-width: 1280px)"
         />
 
         <source
-          srcset="./img/img-tablet.jpj 1x, ./img/tablet-2x.jpj 2x"
+          srcset="
+            ./img/about/about-tablet@1.jpg 1x,
+            ./img/about/about-tablet@2.jpg 2x
+          "
           media="(min-width: 768px)"
         />
 
         <source
-          srcset="./img/about-img.jpg 1px, ./img/mobile-2px.jpj 2px"
+          srcset="./img/about/about-mobile@1.jpg 1px, ./img/about/about-mobile@2.jpg 2x"
           media="(max-width: 767px)"
         />
 
         <img
-          src="./img/img-desktop.jpg"
+          src="./img/about/about-desktop@1.jpg"
           alt="my photo"
           width="384"
           height="448"
           class="about-image"
         />
       </picture>
-    </div>
-    <div class="bio">
-      <h3 class="classic-title">BIO</h3>
-      <div class="text-wrap">
-        <p class="text-style text-mod1">
+
+      <div class="bio-wrapper">
+        <h3 class="classic-title">BIO</h3>
+        <p class="text-style">
           I'm Lloyd Jefferson, a talented programmer specializing in software
           development. My expertise spans various programming languages and
           technologies, and I am dedicated to continually enhancing my skills. I
@@ -38,7 +44,7 @@
           leveraging a high level of analytical skills to effectively tackle
           even the most challenging tasks.
         </p>
-        <p class="text-style text-mod2">
+        <p class="text-style">
           Adaptable to both independent and team-oriented work, I collaborate
           seamlessly with colleagues, exchanging ideas and finding optimal
           solutions. My professional maturity enables me to navigate challenges
@@ -49,7 +55,7 @@
         </p>
       </div>
     </div>
-    <div class="decor"></div>
+
     <div class="content-wrap">
       <div class="education">
         <h3 class="classic-title">EDUCATION</h3>
