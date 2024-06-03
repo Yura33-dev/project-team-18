@@ -27,6 +27,12 @@
     height: 28px;
 }
 
+.hero-button-container {
+    position: relative;
+    z-index: 1;
+    display: flex;
+}
+
 .hero-icon {
     width: 28px;
     --color2: #2ecc71;
@@ -44,15 +50,15 @@
     height: 92px;
     background-color: #00B06833;
     border-radius: 16px;
-    z-index: -1;
+    z-index: 0;
     transition: background-color var(--transition);
     transition: background-color 250ms linear;
 }
 
 .hero-custom-button:hover::after,
+.hero-custom-button:focus::after,
 .hero-custom-button:active::after {
     background-color: #00B06899;
-    ;
 }
 
 .hero-moto {
@@ -160,6 +166,7 @@
         color: var(--text-color);
         width: 340px;
         text-align: right;
+        margin-top: -20px;
     }
 
     .hero-fstack-container {

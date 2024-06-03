@@ -69,7 +69,7 @@
     .menu-close-icon {
         width: 30px;
         height: 30px;
-        --color3: #292929;
+        --color3: var(--text-color);
     }
 
     .sidebar-nav-list {
