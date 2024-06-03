@@ -1,14 +1,10 @@
-.about {
+.container {
   min-width: 320px;
   max-width: 360px;
   margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
-  height: 1750px;
   margin-bottom: 80px;
-}
-
-.about-container {
   position: relative;
 }
 
@@ -24,13 +20,13 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   text-align: right;
-  color: #292929;
   margin-bottom: 40px;
   display: flex;
   align-items: flex-start;
 }
 
 .me {
+  margin-left: 18px;
   color: #00b068;
 }
 
@@ -50,7 +46,6 @@
   flex-direction: column;
   gap: 32px;
   width: 320px;
-  height: 696px;
 }
 
 .classic-title {
@@ -60,7 +55,6 @@
   line-height: 1.25;
   letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: #292929;
 }
 
 .text-wrap {
@@ -69,7 +63,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 24px;
-  height: 624px;
   width: 320px;
 }
 
@@ -79,7 +72,6 @@
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.03em;
-  color: #292929;
   display: flex;
 }
 
@@ -93,6 +85,7 @@
   transform: rotate(-180deg);
   line-height: 24px;
   margin: 10px;
+  flex: 1 0 auto;
 }
 
 .content-wrap {
@@ -105,7 +98,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 32px;
-  height: 288px;
 }
 
 .education-list {
@@ -123,7 +115,6 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 32px;
-  height: 168px;
 }
 
 .role-list {
@@ -132,11 +123,10 @@
   justify-content: flex-start;
   flex-direction: column;
   gap: 12px;
-  height: 96px;
 }
 
 @media only screen and (min-width: 768px) {
-  .about-me {
+  .container {
     max-width: 768px;
     padding-right: 32px;
     padding-left: 32px;
@@ -162,16 +152,23 @@
   .bio {
     margin-left: auto;
     margin-bottom: 140px;
-    width: 336px;
+    min-width: 336px;
+    max-width: 336px;
     height: 680px;
   }
+  .text-mod1 {
+    min-height: 264px;
+    max-height: 264px;
+  }
+
   .decor {
     background-image: url(../img/decor-image.jpg);
     width: 336px;
-    height: 252px;
+    height: 100px;
     position: absolute;
     top: 856px;
     left: 368px;
+    background-repeat: no-repeat;
   }
 
   .classic-title {
@@ -181,13 +178,14 @@
   }
 
   .text-wrap {
-    width: 336px;
+    min-width: 336px;
+    max-width: 336px;
     height: 600px;
   }
 
   .content-wrap {
     width: 704px;
-    height: 280px;
+    max-width: 704px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
@@ -204,16 +202,27 @@
     width: 336px;
     height: 184px;
   }
+  .education-list {
+    min-height: 200px;
+    max-height: 200px;
+  }
+
+  .role-list {
+    min-height: 104px;
+    max-height: 104px;
+  }
 }
 
 @media only screen and (min-width: 1280px) {
-  .about-me {
+  .container {
     max-width: 1280px;
     height: 1244px;
+    margin-bottom: 164px;
   }
 
   .bio {
-    width: 488px;
+    min-width: 488px;
+    max-width: 488px;
     height: 488px;
     margin-bottom: 312px;
   }
@@ -227,12 +236,19 @@
   }
 
   .text-wrap {
-    width: 488px;
+    min-width: 488px;
+    max-width: 488px;
     height: 408px;
   }
 
+  .text-mod1 {
+    min-height: 168px;
+    max-height: 168px;
+  }
+
   .content-wrap {
-    width: 904px;
+    min-width: 904px;
+    max-width: 904px;
     height: 280px;
     gap: 136px;
     position: absolute;
@@ -247,5 +263,14 @@
     position: absolute;
     top: 436px;
     left: 208px;
+  }
+
+  .education {
+    width: 384px;
+    height: 280px;
+  }
+
+  .role {
+    width: 384px;
   }
 }
