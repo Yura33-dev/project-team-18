@@ -1,17 +1,19 @@
+/* @media only screen and (min-width: 1280px) {
+  
+} */
 @media only screen and (min-width: 1280px) {
+  .wrapper-faq {
+    background-image: url('../img/faq-decor@1.png');
+    background-repeat: no-repeat;
+    background-position: bottom 0px left 0px;
+  }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .wrapper-faq {
-      background-image: url(../img/benefits-decor-bd-@2x.png);
+      background-image: url('../img/faq-decor@2.png');
+      background-size: 50%;
     }
-  }
-}
-@media only screen and (min-width: 1280px) {
-  .wrapper-faq {
-    background-image: url(../img/benefits-decor-bg.png);
-    background-repeat: no-repeat;
-    background-position: bottom 0px left 32px;
   }
 }
 .ac .item-title-wrap.ac-trigger::after {
