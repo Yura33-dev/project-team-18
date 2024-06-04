@@ -1,31 +1,28 @@
 import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
+import spriteSvg from '../img/icons/sprite.svg';
 
-const refs = {
-  accordionWrappers: document.querySelectorAll('.ac'),
-  acList: document.querySelector('.accordion-container'),
-};
-function clickHandler(event) {
-  const clickedElement = event.target;
-  const isAcPanelClicked = clickedElement.closest('.ac-panel');
-  if (isAcPanelClicked) {
+const faqListEl = document.querySelector('.faq-list');
+
+const accordion = new Accordion('.accordion-container', {
+  openOnInit: [0],
+});
+
+const changeArrovSvg = event => {
+  const itemWrapEL = event.target.closest('.ac-trigger');
+  if (!itemWrapEL) {
     return;
   }
-  const closestAc = clickedElement.closest('.ac');
-  const activeElement = document.querySelector('.active');
-  if (activeElement && activeElement.id !== closestAc.id) {
-    activeElement.classList.remove('active');
-  }
-  closestAc.classList.toggle('is-active');
-  for (const wrapper of refs.accordionWrappers) {
-    if (wrapper === event.currentTarget) {
-      continue;
-    }
-    wrapper.classList.remove('is-active');
-  }
-  event.currentTarget.classList.toggle('is-active');
-}
-refs.accordionWrappers.forEach(wrapper => {
-  wrapper.addEventListener('click', clickHandler);
-});
-refs.acList.addEventListener('click', clickHandler);
+
+  const faqItemEl = itemWrapEL.closest('.ac');
+
+  const isActive = faqItemEl.classList.contains('is-active');
+
+  const itemArrowSvgEL = itemWrapEL.querySelector('.faq-scroll-button-icon');
+
+  const svgID = isActive ? '#icon-above' : '#icon-down';
+
+  itemArrowSvgEL.innerHTML = `<use href=".${spriteSvg}${svgID}"></use>`;
+};
+
+faqListEl.addEventListener('click', changeArrovSvg);
