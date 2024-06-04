@@ -48,13 +48,13 @@
 
 .message-together {
   margin-top: 32px;
-  margin-bottom: 32px;
   box-sizing: border-box;
   border-radius: 8px;
   padding: 16px;
   width: 320px;
   height: 128px;
   outline: none;
+  resize: none;
 }
 
 .text-input {
@@ -78,6 +78,7 @@
   color: white;
   background-color: #00b068;
   transition: background-color var(--transition);
+  margin-top: 12px;
 }
 
 .button-together:hover,
@@ -105,6 +106,21 @@
 
 .icon-and-text a {
   transition: color var(--transition);
+}
+
+.email-error {
+  margin-top: 5px;
+  color: #f05748;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  opacity: 0;
+  transition: opacity var(--transition);
+}
+
+.email-error.is-active {
+  opacity: 1;
 }
 
 /* media 768px */

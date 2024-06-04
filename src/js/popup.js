@@ -3,6 +3,9 @@ import iconX from './../img/icons/sprite.svg';
 
 const overlay = document.querySelector('.overlay');
 const form = document.querySelector('.form-message');
+const emailInput = form.querySelector('input[name="email"]');
+const textArea = form.querySelector('textarea[name="comment"]');
+const errorDiv = form.querySelector('.email-error');
 
 form.addEventListener('submit', function (event) {
   event.preventDefault();
@@ -37,20 +40,46 @@ form.addEventListener('submit', function (event) {
 
 overlay.addEventListener('click', function (event) {
   if (event.target.closest('.icon-modal-close')) {
-    overlay.firstElementChild.remove();
-    overlay.classList.toggle('is-active');
-    document.body.style.overflow = 'auto';
+    closePopup();
   } else if (event.target.classList.contains('overlay')) {
-    overlay.firstElementChild.remove();
-    overlay.classList.toggle('is-active');
-    document.body.style.overflow = 'auto';
+    closePopup();
   }
 });
 
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape' && overlay.classList.contains('is-active')) {
-    overlay.firstElementChild.remove();
-    overlay.classList.toggle('is-active');
-    document.body.style.overflow = 'auto';
+    closePopup();
   }
 });
+
+emailInput.addEventListener('input', e => {
+  if (!e.target.value.match(/^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
+    errorDiv.classList.add('is-active');
+  } else {
+    errorDiv.classList.remove('is-active');
+  }
+});
+
+emailInput.addEventListener('blur', e => {
+  if (
+    e.target.value.trim().length === 0 &&
+    e.target.nextElementSibling.value.trim().length === 0
+  ) {
+    errorDiv.classList.remove('is-active');
+  }
+});
+
+textArea.addEventListener('blur', e => {
+  if (
+    e.target.value.trim().length === 0 &&
+    e.target.previousElementSibling.value.trim().length === 0
+  ) {
+    errorDiv.classList.remove('is-active');
+  }
+});
+
+function closePopup() {
+  overlay.firstElementChild.remove();
+  overlay.classList.toggle('is-active');
+  document.body.style.overflow = 'auto';
+}
