@@ -22,7 +22,7 @@ const changeArrovSvg = event => {
 
   const svgID = isActive ? '#icon-above' : '#icon-down';
 
-  itemArrowSvgEL.innerHTML = `<use href=".${spriteSvg}${svgID}"></use>`;
+  itemArrowSvgEL.innerHTML = `<use href="${spriteSvg}${svgID}"></use>`;
 };
 
 faqListEl.addEventListener('click', changeArrovSvg);
