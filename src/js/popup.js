@@ -35,7 +35,8 @@ form.addEventListener('submit', function (event) {
       overlay.classList.toggle('is-active');
       document.body.style.overflow = 'hidden';
     })
-    .catch(e => console.log(e));
+    .catch(e => console.log(e))
+    .finally(() => form.reset());
 });
 
 overlay.addEventListener('click', function (event) {
@@ -52,6 +53,12 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+function closePopup() {
+  overlay.firstElementChild.remove();
+  overlay.classList.toggle('is-active');
+  document.body.style.overflow = 'auto';
+}
+
 emailInput.addEventListener('input', e => {
   if (!e.target.value.match(/^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/)) {
     errorDiv.classList.add('is-active');
@@ -60,10 +67,22 @@ emailInput.addEventListener('input', e => {
   }
 });
 
+textArea.addEventListener('input', e => {
+  if (
+    !e.target.previousElementSibling.previousElementSibling.value.match(
+      /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/
+    )
+  ) {
+    errorDiv.classList.add('is-active');
+  } else {
+    errorDiv.classList.remove('is-active');
+  }
+});
+
 emailInput.addEventListener('blur', e => {
   if (
-    e.target.value.trim().length === 0 &&
-    e.target.nextElementSibling.value.trim().length === 0
+    e.target.value?.length === 0 &&
+    e.target.nextElementSibling.nextElementSibling.value?.length === 0
   ) {
     errorDiv.classList.remove('is-active');
   }
@@ -71,15 +90,9 @@ emailInput.addEventListener('blur', e => {
 
 textArea.addEventListener('blur', e => {
   if (
-    e.target.value.trim().length === 0 &&
-    e.target.previousElementSibling.value.trim().length === 0
+    e.target.value?.length === 0 &&
+    e.target.previousElementSibling.previousElementSibling.value?.length === 0
   ) {
     errorDiv.classList.remove('is-active');
   }
 });
-
-function closePopup() {
-  overlay.firstElementChild.remove();
-  overlay.classList.toggle('is-active');
-  document.body.style.overflow = 'auto';
-}

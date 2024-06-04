@@ -47,7 +47,7 @@
 }
 
 .message-together {
-  margin-top: 32px;
+  margin-top: 12px;
   box-sizing: border-box;
   border-radius: 8px;
   padding: 16px;
@@ -78,7 +78,7 @@
   color: white;
   background-color: #00b068;
   transition: background-color var(--transition);
-  margin-top: 12px;
+  margin-top: 32px;
 }
 
 .button-together:hover,
